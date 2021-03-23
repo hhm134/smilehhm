@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>猜数字</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+			<div id="app">
+				<img src="img/xx.jpg" width="100" height="100"/>
+				<h1>欢迎来到我的世界，骄傲的大马猴！！！</h1>
+				<p>大马猴同学，你已经入闯关模式，现在是第一关--<h2><i>猜数字</i></h2>系统会自动生成一个1-50的数字让你来猜选。</p>
+				{{name}}请输入你的猜测:<input v-model="number" />
+				<p v-if="number==rmdNumber">猜对了！恭喜{{name}}通过第一关！（下一关还没有开发出来...敬请期待~）</p>
+				<p v-if="rmdNumber<number">猜大了!{{name}}重新猜</p>
+				<p v-if="rmdNumber>number">猜小了!{{name}}重新猜</p>
+				
+			</div>
+			<script type="text/javascript">
+			new Vue({
+				el:"#app",
+				data:{
+					rmdNumber:Math.floor(Math.random()*50),
+					
+					number:'',
+					name:'大马猴',
+					
+					
+				}
+			})
+		</script>
+		
+	</body>
+</html>
