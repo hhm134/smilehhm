@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="flag" />
+			<li v-if="flag=='清华大学' ||flag=='厦门大学'">982 211</li>
+			<li v-if="flag=='广西大学'">211</li>
+			
+			
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					flag:''
+					
+					
+					
+				}
+			})
+		</script>
+	</body>
+</html>
