@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="flag" />
+			<li v-if="flag==1||flag==3||flag==5||flag==7||flag==8||flag==10||flag==12">有31天</li>
+			<li v-if="flag==4||flag==6||flag==9||flag==11">30天</li>
+			<li v-if="flag==2">28天</li>
+			
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					flag:''
+					
+					
+					
+				}
+			})
+		</script>
+	</body>
+</html>
