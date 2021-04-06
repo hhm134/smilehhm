@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<div id="app">
+			<p>请输入国家代码号：</p>
+			<input type="text" v-model="shuru" />
+			
+			<p v-if="shuru == schools[0].number">你输入的代码号表示{{schools[0].name}},首都在{{schools[0].location}},代码号为+{{schools[0].number}}</p>
+			<p v-if="shuru == schools[1].number">你输入的代码号表示{{schools[1].name}},首都在{{schools[1].location}},代码号为+{{schools[1].number}}</p>
+			<p v-if="shuru == schools[2].number">你输入的代码号表示{{schools[2].name}},首都在{{schools[2].location}},代码号为+{{schools[2].number}}</p>
+			<p v-if="shuru == schools[3].number">你输入的代码号表示{{schools[3].name}},首都在{{schools[3].location}},代码号为+{{schools[3].number}}</p>
+			<!-- <p v-for="school in schools"><div v-if="school[0].name == shuru">你输入的大学为{{school[0].name}},地址在{{schoos[0].location}}</div></p> -->
+			
+			
+		</div>
+		<script type="text/jscript">
+			new Vue({
+				el:'#app',
+				data:{
+					shuru:'',
+					schools:[
+						{name:'中国',location:'北京',number:'86'},
+						{name:'韩国',location:'首尔',number:'82'},
+						{name:'英国',location:'伦敦',number:'44'},
+						{name:'泰国',location:'曼谷',number:'66'},
+						
+						
+					]
+				}
+			})
+			
+		</script>
+		
+	</body>
+</html>
+
