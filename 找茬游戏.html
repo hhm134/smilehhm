@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.b {
+				background-color: deepskyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<h3>请找出图片中3处不同的地方，每找到一处加一分！</h3>
+			
+			
+			
+			
+			<div>
+				
+				<img src="./img/hm1.jpg"  @click="show()">
+				<br />
+				你的分数为：{{number}}
+				
+				
+				
+			</div>
+			
+			<br />
+			
+			
+			
+			
+		</div>
+		<script type="text/javascript">
+			let v = new Vue({
+				el: '#app',
+				data:{
+					number: 0,
+					
+				},
+				methods:{
+					show(){
+						// v.number++
+						if(event.clientX<477&&event.clientX>455&&event.clientY<179&&event.clientY>161){
+							v.number++
+							
+							
+						}
+						if(event.clientX<488&&event.clientX>462&&event.clientY<273&&event.clientY>242){
+							v.number++
+							
+						}
+						if(event.clientX<409&&event.clientX>400&&event.clientY<234&&event.clientY>226){
+							v.number++
+							
+						}
+						// console.log(event.clientX+","+event.clientY)
+						if(v.number ==3){
+							alert("恭喜你通关成功！")
+						}
+						
+						
+						
+						
+					}
+					
+				}
+			})
+		</script>
+		
+	</body>
+</html>
